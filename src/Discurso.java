@@ -31,7 +31,7 @@ public class Discurso {
 		
 	    while (st.hasMoreTokens()) {//enquanto existir palavras na linha
 	    	palavra = st.nextToken(); //pega proxima palavra da string
-	    	palavra = palavra.replaceAll("[\"!,.:;]", ""); //removendo sinais ortograficos
+	    	palavra = palavra.replaceAll("[\"!“”,.:;()]", ""); //removendo sinais ortograficos
 	    	palavrasDiscurso.add(palavra); //adiciona ao vetor de palavras
 	    }	    
 	}
@@ -153,7 +153,7 @@ public class Discurso {
 	public static void main(String[] args) {
 		
 		Discurso discursoRodrigo = new Discurso();		
-		discursoRodrigo.lerArquivo("C:/Rodrigo/IFMG/3_semestre/AEDS/TP1/rodrigo.txt");
+		discursoRodrigo.lerArquivo("C:/Rodrigo/IFMG/3_semestre/AEDS/TP1/dilma.txt");
 		//discursoRodrigo.ordenarDiscursoQuickSort(palavrasDiscurso, 0, palavrasDiscurso.size()-10);
 		discursoRodrigo.ordenarDiscursoBubbleSort();
 		discursoRodrigo.salvarArquivo("C:/Rodrigo/IFMG/3_semestre/AEDS/TP1/rodrigo_result.txt");
